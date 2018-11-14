@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="tensorflow_object_detection" type="object_detection_ros.py" name="object_detection0" >
+        <param name="per" type="double" value="0.3" />
+        <param name="dev" type="string" value="2" />
+        <remap from="/image"                  to="/camera0/color/image_raw/republish" />
+        <remap from="/object_detection/image" to="/object_detection/image0"/>
+        <remap from="/objectinfo"             to="/objectinfo0" />
+    </node>
+
+    <node pkg="tensorflow_object_detection" type="object_detection_ros.py" name="object_detection1" >
+        <param name="per" type="double" value="0.3" />
+        <param name="dev" type="string" value="2" />
+        <remap from="/image"                  to="/camera1/color/image_raw/republish" />
+        <remap from="/object_detection/image" to="/object_detection/image1"/>
+        <remap from="/objectinfo"             to="/objectinfo1" />
+    </node>
+
+    <node pkg="tensorflow_object_detection" type="object_detection_ros.py" name="object_detection2" >
+        <param name="per" type="double" value="0.3" />
+        <param name="dev" type="string" value="3" />
+        <remap from="/image"                  to="/camera2/color/image_raw/republish" />
+        <remap from="/object_detection/image" to="/object_detection/image2"/>
+        <remap from="/objectinfo"             to="/objectinfo2" />
+    </node>
+
+    <node pkg="tensorflow_object_detection" type="object_detection_ros.py" name="object_detection3" >
+        <param name="per" type="double" value="0.3" />
+        <param name="dev" type="string" value="3" />
+        <remap from="/image"                  to="/camera3/color/image_raw/republish" />
+        <remap from="/object_detection/image" to="/object_detection/image3"/>
+        <remap from="/objectinfo"             to="/objectinfo3" />
+    </node>
+
+    <node pkg="tensorflow_object_detection" type="object_detection_ros.py" name="object_detection4" >
+        <param name="per" type="double" value="0.3" />
+        <param name="dev" type="string" value="1" />
+        <remap from="/image"                  to="/camera4/color/image_raw/republish" />
+        <remap from="/object_detection/image" to="/object_detection/image4"/>
+        <remap from="/objectinfo"             to="/objectinfo4" />
+    </node>
+
+</launch>
